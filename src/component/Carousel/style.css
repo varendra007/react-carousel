@@ -1,60 +1,96 @@
-
+.root-component {
+	display: flex;
+	flex-direction: row;
+	margin: 150px 40px 0 10px;
+	border-radius: 8px;
+	padding-right: 20px;
+	position: absolute;
+	width: 90%;
+	box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.left-column {
+	background-color: rgb(59, 59, 218);
+	border-radius: 8px;
+	padding: 40px 50px 30px 40px;
+}
 .card {
 	opacity: 0;
 }
+.logo{
+	color: white;
+}
 .active-card {
 	opacity: 1;
+}
+.description{
+	line-height: 25px;
 }
 .dots {
 	width: 10px;
 	height: 10px;
 	border-radius: 5px;
-	background-color: green;
+	background-color: white;
 	margin: 5px;
-	border: ' solid 1px black';
+	border: '2px solid black';
+	box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.5);
 }
 .active-dot {
 	width: 10px;
 	height: 10px;
 	border-radius: 5px;
-	background-color: red;
+	background-color: orange;
 	margin: 5px;
-	border: '1px solid black';
+	border: '2px solid red';
 }
 .title {
-	color: 'black';
+	color: black;
 }
 .active-title {
-	color: '#ffff' !important;
+	color: #ffff !important;
 }
-
-#root-component {
-	display: 'flex' !important;
-	flex-direction: 'row' !important;
-	margin: '150px 40px 0 10px' !important;
-	background-color: 'red' !important;
-	border-radius: '8px' !important;
-	padding-right: '20px' !important;
-	position: 'absolute' !important;
-	width: '90%' !important;
-}
-#left-column {
-	background-color: 'blueviolet';
-	border-radius: '8px';
-	padding: '40px 50px 30px 40px';
-	/* width: '', */
+.title-underline{
+	width: 6rem;
+	background-color: rgb(133, 63, 199);
+	height: 0.3rem;
+	border-radius: 8pt;
+	border: none;
 }
 .right-column {
-	position: 'relative';
-	width: '70%';
-	margin-left: '100px';
+	position: relative;
+	width: 70%;
+	margin-left: 100px;
 }
-.abcd {
-	display: 'flex';
-	position: 'absolute';
-	justify-content: 'center';
-	align-items: 'center';
+.right-column>div {
+	position: absolute;
+	height: 100%;
+}
+.sliding-container {
+	display: flex;
+	position: absolute;
+	justify-content: center;
+	align-items: center;
 	bottom: 0;
 	left: 0;
 	right: 0;
 }
+
+.btn:hover {
+	cursor: pointer;
+}
+.btn-next {
+	width: 50px;
+	height: 50px;
+	border-radius: 25px;
+	color: white;
+	margin-left: 30px;
+	background-color: orange;
+}
+.btn-prev {
+	width: 50px;
+	height: 50px;
+	border-radius: 25px;
+	color: white;
+	margin-right: 30px;
+	background-color: orange;
+}
+

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import data from '../../data/carouselData';
 import './style.css';
 const Carousel = () => {
@@ -11,7 +11,7 @@ const Carousel = () => {
 		if (data.length !== currentIndex) {
 			setIndex((prevState) => prevState + 1);
 		} else {
-			setIndex((prevState) => 1);
+			setIndex(1);
 		}
 	};
 
@@ -22,6 +22,17 @@ const Carousel = () => {
 			setIndex((prevState) => prevState - 1);
 		}
 	};
+
+	const slide = useRef();
+	useEffect(() => {
+		slide.current = handleNext;
+	});
+	useEffect(() => {
+		const play = () => {
+			slide.current();
+		};
+		const delay = setInterval(play, 1500);
+	}, []);
 
 	return (
 		<>
@@ -46,11 +57,8 @@ const Carousel = () => {
 				<div className="right-column">
 					{data.map((el, ind) => (
 						<div className={currentIndex === ind + 1 ? 'active-card' : 'card'}>
-							<h1 style={{marginBottom: 0}}>{el.title}</h1>
-							<hr
-								className='title-underline'
-							
-							></hr>
+							<h1 style={{ marginBottom: 0 }}>{el.title}</h1>
+							<hr className="title-underline"></hr>
 							<p className="description">{el.description}</p>
 							<div className="sliding-container">
 								<h1

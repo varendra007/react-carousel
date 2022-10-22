@@ -25,6 +25,55 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
+     <style>
+      .jw-drawer{font-family:"Poppins";
+
+      font-weight:700;
+      height:20vh;
+      width:100%;
+      position:fixed;
+      -webkit-animation:slide 0.2s ease;
+      -moz-animation:slide 0.2s ease;
+      -o-animation:slide 0.2s ease;
+      -ms-animation:slide 0.2s ease;
+      animation:slide-out 0.2s ease;
+      animation-fill-mode:forwards;
+      background-color:#f5f6f7;
+      overflow-y:auto;
+      display:flex;
+      z-index:999}
+      .jw-drawer nav{
+        width:calc(90% - 25px);
+        float:left;display:flex;
+      }
+      .jw-drawer ul li{list-style:none;margin:1rem}
+      .jw-drawer ul{display:flex}
+      
+      .jw-drawer ul li a{
+        font-family:'Lexend Deca';
+        background:#f5f6f7;
+        cursor:pointer;
+        position:relative;
+        padding:10px;
+        margin:10px auto 20px auto;
+        border-radius:15px;
+        box-shadow:-4px -2px 4px 0px #ffffff, 4px 2px 6px 0px #DFE4EA;
+        text-align:center;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        color:#0D3C82!important;
+        font-size:14px
+      }
+      .jw-drawer ul li a svg{width:18px;
+        height:18px;margin-bottom:10px}
+      .jw-drawer ul li a:hover{background-color:#f1f8fb;
+        color:#474e5d!important;
+        padding:auto;
+        box-shadow:inset -2px -2px 5px white, inset 3px 3px 5px rgba(0, 0, 0, 0.1)}
+      </style> 
+      
+      
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
